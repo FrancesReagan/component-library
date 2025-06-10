@@ -1,5 +1,5 @@
 
-// import './App.css'//
+import './App.css'//
 import AlertBox from "./components/AlertBox/AlertBox";
 
 function App() {
