@@ -29,23 +29,39 @@ export const AlertBox: React.FC<AlertBoxProps> = ({
   );
  
   return (
-    <div className={`p-4 border-l-4 ${alertStyles[type]}`}>
+    <div className={`p-4 border-l-4 ${alertStyles[type]}`}
+    role="alert"
+    aria-live="polite"
+    >
       <div className="flex justify-between items-center">
-        <p>{message}</p>
+        <div className="flext items-start">
+          <span className="mr-2 font-bold text-lg" aria-hidden="true">
+            {iconStyles[type]}
+          </span>
+        </div>
+        <div className="flex-1">
+          <p className="font-medium">{message}</p>
+          {children && (
+            <div className="mt-2 text-sm opacity-90">
+              {children}
+              </div>
+          )}
+          </div>
+        </div>
+        
         {onClose && (
           <button
             onClick={onClose}
-            className="ml-4 text-gray-500 hover:text-gray-700 cursor-pointer"
+            className="ml-4 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            aria-label="Close alert"
+            type="button"
           >
-            ×
+            <span className="text-xl">x</span> 
           </button>
         )}
       </div>
-      {children}
     </div>
   );
 };
-
-
 
 export default AlertBox;
