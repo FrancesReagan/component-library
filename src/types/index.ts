@@ -1,6 +1,13 @@
+// type definitions for all components//
 
-// AlertBox//
+// AlertBox--display types with visual styling variations//
 export type AlertType = 'success' | 'error' | 'warning' | 'info';
+
+// props for AlertBox component//
+// @param type - visual style and semantic meanting of alert//
+// @param message - main alert message text//
+// @param onClose - optional callback when close button is clicked//
+// @param children - optional additional content inside alert//
  
 export interface AlertBoxProps {
   type: AlertType;
