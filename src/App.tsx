@@ -1,6 +1,6 @@
 
 import './App.css'//
-import AlertBox from "./components/AlertBox/AlertBox";
+import { AlertBox } from "./components/AlertBox/AlertBox";
 
 function App() {
   const handleClose = (alertType: string) => {
@@ -14,7 +14,8 @@ function App() {
       <AlertBox 
       type="success" 
       message="Hello World"
-      onClose={() => handleClose("success")}/>
+      onClose={() => handleClose("success")}
+      />
       <AlertBox 
       type="error" 
       message="Hello World"

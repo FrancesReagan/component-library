@@ -1,6 +1,6 @@
 
 import React from "react";
-import type { UserProfileCardProps } from "../../types";
+import { UserProfileCardProps } from "../../types";
 
 // UserProfileCard Component//
 // displays user information//
@@ -17,19 +17,14 @@ import type { UserProfileCardProps } from "../../types";
 // onEdit={handleEdit}
 // />
 
-const UserProfileCard: React.FC<UserProfileCardProps> = ({
+export const UserProfileCard: React.FC<UserProfileCardProps> = ({
   user,
-  showEmail = true,
-  showRole = true,
+  showEmail = false,
+  showRole = false;
   onEdit,
   children
 }) => {
-  // generate initals form name for avatar fallback//
-  const getInitials = (name: string): string => {
-    return name
-    .split(" ")
-    .map(part => part.charAt(0).toUpperCase())
-    .slice(0,2)
-    .join(" ");
-  };
+ return (
+  <div className=""
+ )
 } 
