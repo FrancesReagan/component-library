@@ -18,7 +18,13 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
         className="w-full h-48 object-cover"
         />
       }}
-      
+      <div className="p-6">
+        <h3 className="text=xl font-bold text-gray-900 mb-2">{product.name}</h3>
+        <p className="text-2xl font-bold text-blue-600 mb-4">
+          ${product.price}
+          </p>
+          
+      </div>
 
 
 
