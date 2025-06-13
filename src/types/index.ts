@@ -1,18 +1,12 @@
-// type definitions for all components//
-
-// AlertBox--display types with visual styling variations//
-export type AlertType = 'success' | 'error' | 'warning' | 'info';
-
-// props for AlertBox component//
-// @param type - visual style and semantic meanting of alert//
-// @param message - main alert message text//
-// @param onClose - optional callback when close button is clicked//
-// @param children - optional additional content inside alert//
- 
+// this is the recipe card - here are the ingredients I need//
 export interface AlertBoxProps {
-  type: AlertType;
+  // what color style?//
+  type: "success" | "error" | "warning" | "info";  
+  // what text to show?//
   message: string;
+  // what happens when X is clicked?//
   onClose?: () => void;
+  // any extra content inside?//
   children?: React.ReactNode;
 }
 
