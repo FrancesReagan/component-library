@@ -1,7 +1,8 @@
 // this is the recipe card - here are the ingredients I need//
+export type AlertType = "success" | "error" | "warning" | "info";
+
 export interface AlertBoxProps {
-  // what color style?//
-  type: "success" | "error" | "warning" | "info";  
+  type: AlertType  
   // what text to show?//
   message: string;
   // what happens when X is clicked?//

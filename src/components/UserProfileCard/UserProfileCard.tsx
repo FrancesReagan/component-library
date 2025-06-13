@@ -2,25 +2,11 @@
 import React from "react";
 import { UserProfileCardProps } from "../../types";
 
-// UserProfileCard Component//
-// displays user information//
-// features: //
-// -avatar display with fallback initials//
-// -optimal email and role display//
-// -edit functionality//
-// -responsive design//
-// -support for additional content//
-// @example 
-// <UserProfileCard
-// user={userData}
-// showEmail={true}
-// onEdit={handleEdit}
-// />
-
+// React.FC--hey React, this is a function componen...UserProfileCardProps--use the recipe I wrote earlier---{{give me these ingredients from recipe//
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({
   user,
   showEmail = false,
-  showRole = false;
+  showRole = false,
   onEdit,
   children
 }) => {
