@@ -1,7 +1,9 @@
 // app.tsx or app.jsx is just for testing or demoing each component--does not get published//
-
-import { AlertBox } from "./components/AlertBox/AlertBox";
-
+import  { useState } from "react";
+import  { AlertBox }  from "./components/AlertBox/AlertBox";
+import  { UserProfileCard }  from "./components/UserProfileCard/UserProfileCard";
+import { ProductDisplay } from "./components/ProductDisplay/ProductDisplay";
+import { User, Product } from "./types";
 
 import './App.css';
 

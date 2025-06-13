@@ -1,9 +1,9 @@
 
 import React from "react";
-import { UserProfileCardProps } from "../../types";
+import type { UserProfileCardProps } from "../../types";
 
 
-export const UserProfileCardProps: React.FC<UserProfileCardProps> = ({
+export const UserProfileCard: React.FC<UserProfileCardProps> = ({
   user,
   showEmail = false,
   showRole = false,
