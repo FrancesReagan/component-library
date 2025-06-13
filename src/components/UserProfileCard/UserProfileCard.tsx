@@ -2,15 +2,26 @@
 import React from "react";
 import { UserProfileCardProps } from "../../types";
 
-// React.FC--hey React, this is a function componen...UserProfileCardProps--use the recipe I wrote earlier---{{give me these ingredients from recipe//
-export const UserProfileCard: React.FC<UserProfileCardProps> = ({
+
+export const UserProfileCardProps: React.FC<UserProfileCardProps> = ({
   user,
   showEmail = false,
   showRole = false,
   onEdit,
   children
+
 }) => {
  return (
-  <div className=""
- )
-} 
+  <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md p-6">
+    <div className="flex items-center mb-4">
+      {user.avatarUrl && (
+        <img
+        src={user.avatarUrl}
+        alt={`${user.name}'s avatar`}
+        classNam="w-16 h-16 rounded-full object-cover"
+        />
+      )}
+    </div>
+  </div>
+ 
+)} 
