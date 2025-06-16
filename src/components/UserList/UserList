@@ -1,0 +1,18 @@
+//not for lab 1---activity for later lesson in mod9//
+
+function UserList() {
+
+const users = [
+    {id: 1, name: 'Bill', email: 'bill@microsoft.com'},
+    {id: 2, name: 'Steve', email: 'steve@apple.com'},
+    {id: 3, name: 'Elon', email: 'elon@tesla.com'},
+    {id: 4, name: 'Mark', email: 'mark@facebook.com'},
+]
+    return (
+        <div>
+            <h2>User list</h2>
+        </div>
+    )
+}
+
+export default UserList

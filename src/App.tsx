@@ -5,6 +5,7 @@ import  { UserProfileCard }  from "./components/UserProfileCard/UserProfileCard"
 import { ProductDisplay } from "./components/ProductDisplay/ProductDisplay";
 import { User, Product } from "./types";
 
+
 import './App.css';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             onClose={() => handleClose("warning")}
           />
         </div>
+        
       </section>
 </div>
 )};
