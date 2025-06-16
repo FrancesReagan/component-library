@@ -3,17 +3,23 @@ import  { useState } from "react";
 import  { AlertBox }  from "./components/AlertBox/AlertBox";
 import  { UserProfileCard }  from "./components/UserProfileCard/UserProfileCard";
 import { ProductDisplay } from "./components/ProductDisplay/ProductDisplay";
-import { User, Product } from "./types";
+// add types//
+import { User, Product } from "./types";   
+import "./App.css";
 
-
-import './App.css';
 
 function App() {
-  // existing handler function//
-  const handleClose = (alertType: string) => {
-    console.log(`Closing ${alertType} alert`);
+  const [showAlert, setShowAlert] = useState(false);
+  const [cartItems, setCartItems] = useState[]>([]);
 
-  };
+  const user: User = {
+    id: "1",
+    name: "Lois Lane",
+    email: "lois.lane@thedailyplanet.com",
+    role: "newspaper reporter",
+    avatarUrl: "https://i.pravatar.cc/300",
+  }
+  
 
 
 
