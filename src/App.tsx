@@ -4,13 +4,13 @@ import  { AlertBox }  from "./components/AlertBox/AlertBox";
 import  { UserProfileCard }  from "./components/UserProfileCard/UserProfileCard";
 import { ProductDisplay } from "./components/ProductDisplay/ProductDisplay";
 // add types//
-import { User, Product } from "./types";   
+import type { User, Product } from "./types";   
 import "./App.css";
 
 
 function App() {
   const [showAlert, setShowAlert] = useState(false);
-  const [cartItems, setCartItems] = useState[]>([]);
+  const [cartItems, setCartItems] = useState<string[]>([]);
 
   const user: User = {
     id: "1",
@@ -25,9 +25,11 @@ function App() {
     name: "Wireless Headphones",
     price: 199.99,
     description: "High-quality wireless headphones with noise cancellation",
-    imageUrl: "https://place-hold.it/300x200/white/black/black.jpg&bold&italic",
+    imageUrl: "https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg",
     inStock: "true",
   };
+// possible placeholder---just color//
+  // https://place-hold.it/300x200/white/black/black.jpg&bold&italic
 
 const handleAddToCart= (productId:string) => {
   setCartItems([...cartItems, productId]);
@@ -35,7 +37,7 @@ const handleAddToCart= (productId:string) => {
 };
 
 const handleEditUser = (userId: string) => {
-  console.log(`Editing user $(userId)`);
+  console.log(`Editing user ${userId}`);
 };
 
 const handleClose = (alertType: string) => {
@@ -112,14 +114,12 @@ const handleClose = (alertType: string) => {
        onAddToCart={handleAddToCart}>
 
       <div className="text-sm text-gray-500 mt-4">
-        Free Shipping Available:)
+        Free Shipping Available
       </div>
       </ProductDisplay>
   </div>
 </section>
-
-
-
 </div>
-)};
+  );
+}
 export default App;
