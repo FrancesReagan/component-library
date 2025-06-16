@@ -8,7 +8,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
   showEmail = false,
   showRole = false,
   onEdit,
-  children
+  children,
 
 }) => {
  return (
@@ -22,12 +22,12 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
         />
       )}
       <div className="ml-4">
-        <h3 className="text-lg font-semibold text-gray-900">{user.name}</h3>
+        <h3 className="text-xl font-semibold text-gray-900">{user.name}</h3>
         {showEmail && (
-          <p className="text-sm text-gray-600">{user.email}</p>
+          <p className="text-sm text-gray-600 mb-2">{user.email}</p>
         )}
         {showRole && (
-          <p className="text-sm text-blue-600 font-medium">{user.role}</p>
+        <p className="text-sm text-blue-600 font-medium mb-2">{user.role}</p>
         )}
       </div>
     </div>
