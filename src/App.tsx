@@ -44,36 +44,82 @@ const handleClose = (alertType: string) => {
 };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1>My Components Library</h1>
+    <div className = "p-4 max-w-5xl mx-auto"> 
+      <h1 className = "text-3xl font-bold mb-6">My Components Library</h1>
       
   {/* AlertBox section */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2>Alert Box Components</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Alert Box Components</h2>
+        <div className="flex flex-col gap-4">
+
           <AlertBox 
             type="success" 
             message="Doves Land"
-            onClose={() => handleClose("success")}
-          />
+            onClose={() => handleClose("success")}>
+        <p className="text-sm mt-2">Operation completed successfully.</p>
+          </AlertBox>
+
           <AlertBox 
             type="error" 
             message="Doves Cry"
-            onClose={() => handleClose("error")}
-          />
+            onClose={() => handleClose("error")}>
+            <p className="text-sm mt-2">An error occurred. Please try again.</p>
+            </AlertBox>
+
           <AlertBox 
             type="info" 
             message="Doves in mid flight near Land"
-            onClose={() => handleClose("info")}
-          />
+            onClose={() => handleClose("info")}>
+          <p className="text-sm mt-2">Information updated successfully.</p>
+          </AlertBox>
+
           <AlertBox 
             type="warning" 
             message="Doves far from Land"
-            onClose={() => handleClose("warning")}
-          />
+            onClose={() => handleClose("warning")}>
+           <p className="text-sm mt-2">Proceed with caution</p>
+          </AlertBox>
         </div>
-        
       </section>
+
+<section className="mb-8">
+  <h2 className="text-2xl font-semibold mb-4">Component Composition</h2>
+  {showAlert && (
+    <AlertBox
+      type="success"
+      message="Product added to cart!"
+      onClose={() => handleClose(`cart`)}>
+    <p className="text-sm mt-2">Item added to your shopping cart.</p>
+      </AlertBox>
+  )}
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <UserProfileCard
+      user={user}
+      showEmail={true}
+      showRole={true}
+      onEdit={handleEditUser}>
+
+      <div className="text-sm text-gray-500 mt-4">  
+        Last Login: 4hrs ago
+      </div>
+      </UserProfileCard>
+
+      <ProductDisplay
+       product={product}
+       showDescription={true}
+       showStockStatus={true}
+       onAddToCart={handleAddToCart}>
+
+      <div className="text-sm text-gray-500 mt-4">
+        Free Shipping Available:)
+      </div>
+      </ProductDisplay>
+  </div>
+</section>
+
+
+
 </div>
 )};
 export default App;
