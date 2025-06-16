@@ -34,7 +34,14 @@ const handleAddToCart= (productId:string) => {
   setShowAlert(true);
 };
 
+const handleEditUser = (userId: string) => {
+  console.log(`Editing user $(userId)`);
+};
 
+const handleClose = (alertType: string) => {
+  console.log(`Closing ${alertType} alert`);
+  setShowAlert(false);
+};
 
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
