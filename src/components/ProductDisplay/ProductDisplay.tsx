@@ -23,17 +23,22 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
       )}
       //content section with padding//
       <div className="p-6">
+        //product name as a heading//
         <h3 className="text=xl font-bold text-gray-900 mb-2">{product.name}</h3>
+        //product price formatted to two decimal places//
         <p className="text-2xl font-bold text-blue-600 mb-4">
           ${product.price.toFixed(2)}
         </p>
+        //render description if showdescription is true//
           {showDescription && (
             <p className="text-gray-600 mb-4">{product.description}</p>
           )}
+          //render stock status if showstockstatus is true//
           {showStockStatus && (
             <p className={`text-sm font-medium mb-4 ${product.inStock ? "text-green-600" : "text-red-600"}`}>
                {product.inStock ? "In Stock" : "Out of Stock"} </p>
           )}
+          //render an on-add-to-cart button if onaddtocart is provided, disabled if out of stock//
           {onAddToCart && (
             <button onClick={() => onAddToCart(product.id)}
             className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
