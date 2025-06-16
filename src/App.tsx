@@ -18,8 +18,21 @@ function App() {
     email: "lois.lane@thedailyplanet.com",
     role: "newspaper reporter",
     avatarUrl: "https://i.pravatar.cc/300",
-  }
-  
+  };
+
+  const product: Product = {
+    id: "1",
+    name: "Wireless Headphones",
+    price: 199.99,
+    description: "High-quality wireless headphones with noise cancellation",
+    imageUrl: "https://place-hold.it/300x200/white/black/black.jpg&bold&italic",
+    inStock: "true",
+  };
+
+const handleAddToCart= (productId:string) => {
+  setCartItems([...cartItems, productId]);
+  setShowAlert(true);
+};
 
 
 

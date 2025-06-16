@@ -41,7 +41,7 @@ export interface Product {
 export interface ProductDisplayProps {
   product: Product;
   showDescription?: boolean;
-  showStockStatus?: boolean;
+  inStock?: boolean;
   onAddToCart?: (productId: string) => void;
   children?: React.ReactNode;
 }
