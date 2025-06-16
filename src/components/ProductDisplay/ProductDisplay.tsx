@@ -2,15 +2,18 @@
 import React from "react";
 import type { ProductDisplayProps } from "../../types";
 
+// productdisplay component renders product details with optional description, stock status, and add-to-cart button//
 export const ProductDisplay: React.FC<ProductDisplayProps> = ({
-  product,
-  showDescription = false,
-  showStockStatus = false,
-  onAddToCart,
-  children
+  product, //product object wiht id, name, price, description, optional imageUrl, and inStock//
+  showDescription = false, //show description if true//
+  showStockStatus = false, //show stock status if true//
+  onAddToCart, //optional function to handle add-to-cart action
+  children //optional additional content//
 }) => {
   return (
+    //container for product card with max width, centered, white background, rounded corners and shadow.//
     <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+      //render image if Url is provided//
       {product.imageUrl && (
         <img 
           src={product.imageUrl}
@@ -18,6 +21,7 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
           className="w-full h-48 object-cover"
         />
       )}
+      //content section with padding//
       <div className="p-6">
         <h3 className="text=xl font-bold text-gray-900 mb-2">{product.name}</h3>
         <p className="text-2xl font-bold text-blue-600 mb-4">
