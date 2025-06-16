@@ -37,7 +37,8 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
               Add to Cart
             </button>
           )}
-          {children}
+         //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.//
+       {children && <div className="mt-4"> {children}</div>}
       </div>
     </div>
   );

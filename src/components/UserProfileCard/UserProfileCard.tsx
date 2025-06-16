@@ -2,14 +2,13 @@
 import React from "react";
 import type { UserProfileCardProps } from "../../types";
 
-
+// UserProfile component displays user information with optional email, role, and edit button
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({
-  user,
-  showEmail = false,
-  showRole = false,
-  onEdit,
-  children,
-
+  user, //user object with id, name, email, role, and avatarUrl ---covered in -the addtional content added--that is children//
+  showEmail = false,//show if email if true//
+  showRole = false,//show if role if true//
+  onEdit, //optional---function to handle the edit action//
+  children //represents any additional content added--like avatarUrl, etc that want to add now or later//
 }) => {
  return (
   <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md p-6">
@@ -32,14 +31,17 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
       </div>
     </div>
   
- {onEdit && (
-  <button onClick={() => onEdit(user.id)}
+  //added user.id to the onEdit conditional to ensure the button only renders if user.id exists//
+ {onEdit && user.id && (
+  <button 
+  onClick={() => onEdit(user.id)}
   className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
   >
   Edit Profile
   </button>
  )}
- {children}
+ //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.//
+ {children && <div className="mt-4"> {children}</div>}
 </div>
  );
 };
