@@ -46,4 +46,21 @@ src/
     *Update plugin section:
      plugins: [react(), tailwindcss()]
 
-     
+*Configure CSS files:
+  *Add to the top of /src/index.css:
+   @import"tailwindcss";
+  *Add to /src/App.css:
+  @layer base {h1 {font-size: var(--text-2xl);}
+              {h2 {font-size: var(--text-xl);}
+              {h3 {font-size: var(--text-lg);}
+               a {color: var(--color-blue-600); text-decoration-line:underline;}
+              }
+  *Start development server:
+   npm run dev
+
+*Customizing styles:
+ *Components use Tailwind CSS classes. In order to customize you can modify the component files directly for global changes, use the children prop to add custom
+  content with your own styling, and or wrap components in containers with additional Tailwind classes.
+
+  Acknowledgments: My instructors, Abraham E. Tavarez and Colton Wright of Per Scholas for their continue support and help when I am challenged; my fellow cohort classmates
+  of RTT-2025-23---and to Jermal Wynder--thank you for your presence---you are always with us.
