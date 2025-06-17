@@ -15,6 +15,9 @@ COMPONENTS Library:
 *UserProfileCard - for user information capture and display with optional actions
 *ProductDisplay - showcases products with shopping cart integrated
 
+<img width="153" alt="image" src="https://github.com/user-attachments/assets/3ba155c8-8d46-4153-815d-e64f37c7827f" />
+
+
 Project Structure:
 src/
 -components
