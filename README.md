@@ -17,21 +17,6 @@ COMPONENTS Library:
 
 <img width="153" alt="image" src="https://github.com/user-attachments/assets/3ba155c8-8d46-4153-815d-e64f37c7827f" />
 
-
-Project Structure:
-src/
--components
-  -AlertBox
-    -AlertBox.tsx
-  -UserProfileCard
-    -UserProfileCard.tsx
-  -ProductDisplay
-    -ProductDisplay.tsx
--types
-  -index.ts
--App.tsx
--index.css
-
 ----To Use---
 *Create New Vite app with React-TypeScript-Tailwind
   *Create new Vite project
