@@ -1,3 +1,8 @@
+<img width="1030" alt="image" src="https://github.com/user-attachments/assets/3b1239ce-7612-442b-bcfb-f5e62cd77791" />
+
+
+
+
 ---My Component Library---
 Created this library of reusable React components built with Typescript and used Tailwind CSS for styles.  
 This component library includes these features:
