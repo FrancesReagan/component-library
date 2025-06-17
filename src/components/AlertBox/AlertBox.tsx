@@ -62,7 +62,7 @@ export const AlertBox: React.FC<AlertBoxProps> = ({
       <AlertBox type="success" message="Saved!">
   <p>Your file was saved to Documents folder</p>  // This is children
 </AlertBox> */}
-       //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.//
+       {/* //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.// */}
  {children && <div className="mt-4"> {children}</div>}
     </div>
 

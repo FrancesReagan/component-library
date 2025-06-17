@@ -31,7 +31,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
       </div>
     </div>
   
-  //added user.id to the onEdit conditional to ensure the button only renders if user.id exists//
+  {/* //added user.id to the onEdit conditional to ensure the button only renders if user.id exists// */}
  {onEdit && user.id && (
   <button 
   onClick={() => onEdit(user.id)}
@@ -40,7 +40,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({
   Edit Profile
   </button>
  )}
- //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.//
+ {/* //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.// */}
  {children && <div className="mt-4"> {children}</div>}
 </div>
  );

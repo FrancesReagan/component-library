@@ -13,7 +13,7 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
   return (
     //container for product card with max width, centered, white background, rounded corners and shadow.//
     <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-      //render image if Url is provided//
+      {/* //render image if Url is provided// */}
       {product.imageUrl && (
         <img 
           src={product.imageUrl}
@@ -21,24 +21,24 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
           className="w-full h-48 object-cover"
         />
       )}
-      //content section with padding//
+      {/* //content section with padding// */}
       <div className="p-6">
-        //product name as a heading//
+        {/* //product name as a heading// */}
         <h3 className="text=xl font-bold text-gray-900 mb-2">{product.name}</h3>
-        //product price formatted to two decimal places//
+        {/* //product price formatted to two decimal places// */}
         <p className="text-2xl font-bold text-blue-600 mb-4">
           ${product.price.toFixed(2)}
         </p>
-        //render description if showdescription is true//
+        {/* //render description if showdescription is true// */}
           {showDescription && (
             <p className="text-gray-600 mb-4">{product.description}</p>
           )}
-          //render stock status if showstockstatus is true//
+          {/* //render stock status if showstockstatus is true// */}
           {showStockStatus && (
             <p className={`text-sm font-medium mb-4 ${product.inStock ? "text-green-600" : "text-red-600"}`}>
                {product.inStock ? "In Stock" : "Out of Stock"} </p>
           )}
-          //render an on-add-to-cart button if onaddtocart is provided, disabled if out of stock//
+          {/* //render an on-add-to-cart button if onaddtocart is provided, disabled if out of stock// */}
           {onAddToCart && (
             <button onClick={() => onAddToCart(product.id)}
             className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
@@ -46,7 +46,7 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({
               Add to Cart
             </button>
           )}
-         //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.//
+         {/* //wrapped children in a div and added mt-4 to ensure consistent spacing and to avoid rendering an empty div if children are not provided.// */}
        {children && <div className="mt-4"> {children}</div>}
       </div>
     </div>

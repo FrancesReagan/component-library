@@ -26,7 +26,7 @@ function App() {
     price: 199.99,
     description: "High-quality wireless headphones with noise cancellation",
     imageUrl: "https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg",
-    inStock: "true",
+    inStock: true,
   };
 // possible placeholder---just color//
   // https://place-hold.it/300x200/white/black/black.jpg&bold&italic
